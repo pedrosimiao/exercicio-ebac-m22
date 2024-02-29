@@ -1,0 +1,38 @@
+@use '../variables';
+
+.infos-bar {
+    padding: 24px 32px;
+    background-image: linear-gradient(variables.$yellow, variables.$blue2);
+    opacity: .7;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    border-color: variables.$blue2;
+    border-style: double;
+
+    &__infos {
+        display: flex;
+        gap: 40px;
+
+        &__item {
+            font-size: 14px;
+
+            b {
+                font-size: 18px;
+                display: block;
+            }
+        }
+    }
+
+    @media (max-width: 640px) {
+        display: block;
+
+        &__infos {
+            display: block;
+
+            &__item {
+                margin-bottom: 24px;
+            }
+        }
+    }
+}

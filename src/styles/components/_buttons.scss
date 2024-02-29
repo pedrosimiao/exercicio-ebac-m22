@@ -1,0 +1,32 @@
+@use '../variables';
+
+.button {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    border-color: variables.$pink;
+    border-radius: 10px;
+    border-style: double;
+
+    &--primary {
+        color: variables.$textColor;
+        background-image: linear-gradient(variables.$blue2, variables.$pink);
+    }
+
+    @media (max-width: 640px) {
+        display: block;
+        width: 100%;
+    }
+
+    @media (min-width: 641px) and (max-width: 1024px) {
+        display: flex;
+        align-items: center;
+
+        &__infos {
+            gap: 16px;
+        }
+    }
+}
